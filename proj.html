@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+    <title>trends</title>
+    <meta name="description"
+        content="Discover the latest in beauty at Lush Beauty. Explore our unrivaled selection of makeup, skin care, fragrance and more from classic and emerging brands.">
+    <!-- Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<style>
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+    <!--Header-->
+    <header class="home_header">
+        <a href="images/original.jpg">
+            <img src="images/original.jpg" class="header_icon" alt="image" title="Trends"></a>
+        <h3 id="heading-logo">Trends</h3>
+        <!--Nav-->
+        <nav class="home_nav">
+            <a href="index.html">HOME</a>
+            <a href="catalogue.html">SHOP</a>
+            <a href="contact.html">CONTACT US</a>
+
+            <!-----  coding for cart -->
+
+
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="navclose()">&times;</a>
+                <div class="overlay-content">
+                    <h2 style='font-size:24px;color:white;text-align: center; '>CART ITEMS</h2>
+                    <table id="cart">
+                        <tr>
+                            <td>name</td>
+                            <td>quantity</td>
+                            <td>price</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Total</td>
+                            <td class="cart-total-price"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <button class="btn">
+                <span class="counter" style="color:red;top:2px;">0</span><i class='fas'
+                    style='font-size:24px;float:right;' onclick="navopn()">&#xf07a;</i>
+            </button>
+
+            <!-----Login form ------>
+
+            <div id="mySidenav" class="sidenav">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <table class="setting">
+                    <tr>
+                        <td><input type="text" name="UserName" id="firstName" placeholder="UserName" required
+                                class="third"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" id="lastName" placeholder="password" required
+                                class="four">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Login" name="login" class="button" onclick="check()">
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <button style="font-size:15px;cursor:pointer;border-radius:10px;width:50px;margin-right:90px"
+                onclick="openNav()">
+                Login</button>
+
+
+
+            <!----  LOGOUT ---->
+            <button style="font-size:15px;cursor:pointer;border-radius:10px;width:50px;margin-right:-120px"
+                onclick="logout()">Logout</button>
+
+
+            <!------ search-->
+            <div class="search-container">
+                <form action="/index.html">
+                    <input type="text" placeholder="Search.." onkeyup="search(this)">
+
+                </form>
+
+            </div>
+
+
+        </nav>
+
+    </header>
+    <!--------------------- PRODUCTS-------->
+
+    <div class="other">
+        <h1>OUR PRODUCTS</h1>
+    </div>
+    <br><br><br><br><br><br>
+
+    <div class="wrapper" id='wrapper'>
+
+
+
+
+    </div>
+    <br><br><br>
+
+    <footer class="home_footer">
+
+        <div class="contact_social_media">
+            <h3 id="like"><u>Like and subscribe at:</u></h3>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <p id="copy_right">&copy;shopping</p>
+    </footer>
+    <script src="js/project.js"></script>
+
+
+    <script>
+
+        /*------------------login ----------------------*/
+
+
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "100%";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        const onclose = () => window.location.href = "project.html";
+
+
+
+        /* coding for cart */
+        const navopn = () => document.getElementById("myNav").style.height = "100%";
+
+
+        const navclose = () => document.getElementById("myNav").style.height = "0%";
+
+
+
+
+
+        /*---- coding for preview ------*/
+
+
+        var modal = document.getElementById('id01');
+
+
+
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
