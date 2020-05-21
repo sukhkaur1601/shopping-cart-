@@ -4,8 +4,11 @@ The user can select a city and then the weather and forecast of that city will b
 For each prediction, the forecast displays day and time, temperature, wind speed, and a sky description.
 
 LAnguages and technologies used--
+
 React.js
+
 Javascript
+
 Css3
 
 
